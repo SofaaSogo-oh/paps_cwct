@@ -1,0 +1,37 @@
+:root {
+    --base-color: #f5f5f5;
+    --bkg-color: #f0f0f0;
+    /* Светлый фон */
+    --text-color: #333333;
+    /* Темный текст, читабельный на светлом фоне */
+    --secondary-text: #795548;
+    /* Более темный вторичный текст */
+    --primary-color: #d4c4c4;
+    /* Светлая основа для первичных элементов */
+    --secondary-color: #556443;
+    /* Цвет вторичных элементов, немного темнее основного текста*/
+    --primary-accent-color: #a83f42;
+    /* Акцент, примерно как в темной теме, чуть светлее */
+    --secondary-accent-color: #8a5173;
+    /* Второй акцент, тоже немного светлее */
+    --semi-bkg-color: #ffffff20;
+    --image-filter: none;
+    
+    --warning-bkg-color: #fffbe6; /* Светло-желтый фон */
+    --warning-border-color: #f0ad4e; /* Оранжевый цвет границы */
+     
+    --error-bkg-color: #f2dede; /* Светло-красный фон */
+    --error-border-color: #d9534f; /* Красный цвет границы */
+  }
+  
+.darkmode {
+    --base-color: #1b1616;
+    --text-color: #96a27f;
+    --secondary-text: #d8ac6a;
+    --primary-color: #493131;
+    --secondary-color: #96a27f;
+    --primary-accent-color: #ad3235;
+    --secondary-accent-color: #75234e;
+    --semi-bkg-color: #0f0c15AA;
+    --image-filter: invert(1);
+  }

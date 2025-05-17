@@ -1,0 +1,6 @@
+@import url(../../css/sizes.css);
+
+div.content {
+    margin: var(--header-height-large) 20px 0 20px;
+    min-height: 100px;
+}

@@ -1,0 +1,35 @@
+@import url(colors.css);
+
+.auth-form {
+    padding: 20px;
+    width: 300px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-accent-color);
+    box-sizing: border-box;
+}
+
+.auth-form input[type="submit"] {
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: 1px solid var(--secondary-text);
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.auth-form input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,34 @@
+@import url(colors.css);
+
+.space{
+    padding: 8px 20px;
+    background-color: var(--semi-bkg-color);
+    border-top: 3px solid var(--secondary-color);
+    border-left: 3px solid var(--secondary-color);
+    border-bottom: 4px solid var(--primary-color); 
+    border-right: 4px solid var(--primary-color); 
+    margin: 10px;
+    display: block;
+    max-width: 1260px;
+}
+.accent-space{
+    padding: 20px;
+    background-color: var(--semi-bkg-color);
+    border-top: 3px solid var(--secondary-accent-color);
+    border-left: 3px solid var(--secondary-accent-color);
+    border-bottom: 4px solid var(--primary-accent-color); 
+    border-right: 4px solid var(--primary-accent-color); 
+    margin: 10px;
+    display: block;
+    max-width: 1260px;
+}
+.warning-space {
+    background-color: var(--warning-bkg-color) !important; /* Или любой другой цвет фона для предупреждений */
+    border-top-color: var(--warning-border-color) !important; /* Или другой цвет для верхней и левой границы */
+    border-left-color: var(--warning-border-color) !important;
+}
+.error-space {
+    background-color: var(--error-bkg-color) !important; /* Или любой другой цвет фона для ошибок */
+    border-top-color: var(--error-border-color) !important; /* Или другой цвет для верхней и левой границы */
+    border-left-color: var(--error-border-color) !important;
+}
