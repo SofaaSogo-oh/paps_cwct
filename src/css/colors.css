@@ -22,6 +22,8 @@
      
     --error-bkg-color: #f2dede; /* Светло-красный фон */
     --error-border-color: #d9534f; /* Красный цвет границы */
+    
+    --hot-text: hotpink;
   }
   
 .darkmode {

@@ -1,8 +1,10 @@
 @import url(../../css/sizes.css);
+@import url(../../css/colors.css);
 
 header {
-    background-color: #1b1616;
-    color: #ffffff;
+    background-color: var(--secondary-color);
+    color: var(--base-color);
+    border-bottom: 3px solid var(--secondary-accent-color);
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -10,22 +12,72 @@ header {
     left: 0;
 }
 
-div.header {
-    width: 90%;
-    padding-left: 20px;
-    padding-right: 20px;
+.AppHeader {
+    width: 100%;
+    padding-left: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
-div.header-content {
+.AppHeader-globalBar {
     display: flex;
-    max-width: 1260px;
-    height: var(--header-height-large);
     height: var(--header-height-large);
     box-orient: horizontal;
     box-direction: normal;
     flex-direction: row;
     box-align: center;
     align-items: center;
+}
+
+.AppHeader .header-globalBar .header-logo {
+    width: var(--base-size-32, 32px);
+    height: var(--base-size-32, 32px);
+    outline-offset: 2px;
+    border-radius: var(--borderRadius-full);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.nav-links {
+    display: flex;
+    padding-left: var(--base-size-16);
+    padding-right: var(--base-size-16);
+    align-items: center;
+    height: var(--header-height-large);
+}
+
+.nav-links .nav-link {
+    padding-left: var(--base-size-16);
+    padding-right: var(--base-size-16);
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .active {
+    background-color: var(--text-color);
+}
+
+.nav-link a {
+    text-decoration: none;
+}
+
+.nav-link a:link {
+    color: var(--primary-color);
+}
+
+.nav-link a:visited {
+    color: var(--primary-color);
+}
+
+.nav-link a:hover {
+    color: var(--hot-text );
+}
+
+.nav-link a:active{
+    color: red;
 }

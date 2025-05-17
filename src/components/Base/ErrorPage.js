@@ -2,6 +2,8 @@ import React from "react"
 import Base from "./Base";
 
 const codes = {
+    400: "Bad Request",
+    401: "Unauthorized",
     404: "Not found",
     403: "Forbidden",
 };
