@@ -5,7 +5,7 @@ import { checkAuthStatus, setAuthToken } from "../../helper/authStatus";
 import { useNavigate } from "react-router-dom";
 import "../../css/placement.css"
 import "axios"
-import "../../css/forms.css"
+import "./AuthForm.css"
 import axios from "axios";
 
 export default function Register() {

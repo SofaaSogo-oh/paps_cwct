@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import Base from "./Base/Base"
+import ImageSelector from "./Base/ImageSelector";
 
 export default function WelcomePage() {
+    const [imgState, setImgState] = useState(null);
     return (
         <Base>
+            <ImageSelector imgState={imgState} setImgState={setImgState} />
             <h1>Hello there!</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim elit eu vehicula sollicitudin. Phasellus hendrerit gravida diam volutpat elementum. Sed volutpat mollis vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum lorem sed aliquet efficitur. Vivamus augue diam, dapibus aliquam cursus sed, porttitor id magna. Phasellus aliquam lorem ut dui tempus ornare.

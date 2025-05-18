@@ -1,0 +1,12 @@
+@import url(colors.css);
+
+button {
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-text);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}

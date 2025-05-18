@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/blocks.css"
+import "../../css/blocks.css"
 
 export default function Car({ brand, model, license_plate, rental_price, children, img }) {
     return (

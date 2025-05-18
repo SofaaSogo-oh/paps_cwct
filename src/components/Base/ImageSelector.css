@@ -1,0 +1,26 @@
+@import url(../../css/buttons.css);
+@import url(../../css/sizes.css);
+
+.img-space {
+    display: flex;
+    width: var(--image-size);
+    height: calc(var(--image-size)+var(--base-size-16));
+    flex-direction: column;
+}
+
+.img-block {
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
+.svg-block {
+    color: var(--primary-color);
+}
+
+.img-menu-block {
+    display: flex;
+}
+
+.img-menu-block button {
+    width: 100%;
+}

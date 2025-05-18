@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { checkAuthStatus, setAuthToken } from "../../helper/authStatus";
 import { useNavigate } from "react-router-dom";
 import "axios"
-import "../../css/forms.css"
+import "./AuthForm.css"
 import "../../css/placement.css"
 import axios from "axios";
 
@@ -61,7 +61,7 @@ export default function Login() {
                         </form>
                     </div>
                     {respErr &&
-                        (<div class="space  auth-form error-space">
+                        (<div class="space auth-form error-space">
                             {respErr}
                         </div>)}
                 </div>
