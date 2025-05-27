@@ -35,7 +35,7 @@ export default function Header() {
                         </div>
                         <div class='nav-links'>
                             {checkAuthStatus() ? (
-                                <NavLink to="/personal_account">Личный кабинет</NavLink>
+                                <NavLink to="/profile_page">Личный кабинет</NavLink>
                             ) : (
                                 <>
                                     <NavLink to="/login">Вход</NavLink>

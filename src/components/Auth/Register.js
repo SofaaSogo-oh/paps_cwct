@@ -7,28 +7,29 @@ import "../../css/placement.css"
 import "axios"
 import "./AuthForm.css"
 import axios from "axios";
+import { useHandleChange } from "../../helper/formUtils";
 
 export default function Register() {
-    const [login, setLogin] = useState('');
-    const [password, setPassword] = useState('');
+    const [formData, set_formData] = useState({
+        login: '',
+        password: ''
+    });
     const [respErr, setRespErr] = useState('');
     const navigate = useNavigate();
+    const handleChange = useHandleChange(set_formData);
+
     const onSubmit = async (event) => {
         event.preventDefault();
-        console.log(login + password);
-        axios.post("/api/user/register", {
-            login: login,
-            password: password
-        })
-            .then(function (response) {
-                console.log(response);
-                setAuthToken(response.data.token);
-                navigate("/");
-            })
-            .catch(function (error) {
-                console.log(error);
-                setRespErr(`Error (${error.response.status}): ${error.response.data}`);
-            })
+        console.log(formData);
+        try {
+            const response = await axios.post("/api/user/register", formData);
+            setAuthToken(response.data.token);
+            navigate("/");
+        } catch (error) {
+            setRespErr(error.response ?
+                `Error (${error.response.status}): ${error.response.data}`
+                : "Connection error. Try again later");
+        }
     }
     useEffect(() => {
         if (checkAuthStatus())
@@ -42,19 +43,19 @@ export default function Register() {
                     <div class="space auth-form">
                         <h2>Регистрация</h2>
                         <form id="login-form" onSubmit={onSubmit}>
-                            <label for="login">Логин</label>
+                            <label htmlFor="login">Логин</label>
                             <input type="text"
                                 id="login"
                                 name="login"
-                                onChange={(e) => setLogin(e.target.value)}
+                                onChange={handleChange}
                                 required /><br />
 
-                            <label for="password">Пароль</label>
+                            <label htmlFor="password">Пароль</label>
                             <input
                                 type="password"
                                 id="password"
                                 name="password"
-                                onChange={(e) => setPassword(e.target.value)}
+                                onChange={handleChange}
                                 required /><br /><br />
 
                             <input type="submit" value="Вход" />

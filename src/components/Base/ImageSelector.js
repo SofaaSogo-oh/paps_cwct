@@ -3,11 +3,12 @@ import "../../css/blocks.css"
 import "./ImageSelector.css"
 
 
-export default function ImageSelector({ imgState, setImgState }) {
+export default function ImageSelector({ imgState, setImgState, id }) {
     const fileInputRef = useRef(null);
     const handleButtonClick = () => {
         fileInputRef.current.click();
     }
+    const isUrl = typeof imgState === 'string';
     return (
         <div className="space img-space">
             <div className="img-block">
@@ -15,7 +16,7 @@ export default function ImageSelector({ imgState, setImgState }) {
                     <img
                         alt="not found"
                         className="img-block"
-                        src={URL.createObjectURL(imgState)} />
+                        src={isUrl ? imgState : URL.createObjectURL(imgState)} />
                 ) : (
                     <svg xmlns="http://www.w3.org/2000/svg" className="img-block svg-block" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path>
@@ -27,6 +28,7 @@ export default function ImageSelector({ imgState, setImgState }) {
                 <input
                     type="file"
                     name="Загрузка изображения"
+                    id={id}
                     onChange={(event) => {
                         setImgState(event.target.files[0]);
                     }}

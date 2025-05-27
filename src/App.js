@@ -6,6 +6,9 @@ import Base from './components/Base/Base';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import WelcomePage from './components/WelcomePage';
+import PP_edit from './components/PP/PP_edit';
+import PP from './components/PP/PP';
+import FooUpload from './components/FooUpload';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path='/' element={<WelcomePage />}/>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/profile_page' element={<PP />} />
+        <Route path='/profile_page/edit' element={<PP_edit />} />
+        <Route path='/upload' element={<FooUpload />} />
       </Routes>
     </BrowserRouter>
   );

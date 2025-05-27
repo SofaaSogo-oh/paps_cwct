@@ -1,0 +1,47 @@
+.profile-picture-container {
+    flex: 0 0 auto;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid var(--secondary-color);
+}
+
+.user-info {
+    flex: 1 1 auto;
+}
+
+.name-section, .contact-section {
+    margin-bottom: 16px;
+}
+
+.name-section h3, .contact-section h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--primary-accent-color);
+}
+
+.warning-space {
+    background-color: var(--warning-bkg-color) !important;
+    border-color: var(--warning-border-color) !important;
+}
+
+.error-space {
+    background-color: var(--error-bkg-color) !important;
+    border-color: var(--error-border-color) !important;
+}
+
+@media (max-width: 768px) {
+    .accent-space > div {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+}
